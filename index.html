@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Listings</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+
+
+ </head>
+
+ <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand navbar-brandlite" href="#">Your Logo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="navbar nav-item active">
+            <a class="nav-link" href="#">Find Jobs</a>
+          </li>
+          <li class="navbar nav-item">
+            <a class="nav-link" href="#">Browse Company</a>
+          </li>
+          <li class="navbar nav-item">
+            <a class="nav-link" href="#">Career Tips</a>
+          </li>
+          <li class="navbar nav-item">
+            <a class="nav-link" href="#">Sign in</a>
+          </li>
+          <li class="navbar nav-item">
+            <a class="nav-link btn btn-primary" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div id="section1">
+      <div class="text-container">
+        <div class="text fade-in">
+          <h1>It'S Easy to Find </h1>
+          <h1>Your Dream Job</h1>
+          <h4>Explore thousands of jobs in one place and get your dream job.</h4>
+          <a href="#section2" class="Page1-button">Get Started Free</a>
+        </div>
+      </div>
+    </div>
+
+
+       <section id="section2">
+        <div class="search-container">
+          <form action="/search" method="GET">
+            <input type="text" placeholder="Search jobs..." name="q">
+            <button type="submit">Search</button>
+          </form>
+        </div>
+    
+        <h2>Latest Job Listings</h2>
+    
+        <div class="job-listings">
+          <div class="job slide-up">
+            <h3>Software Engineer</h3>
+            <p>Company A</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+          </div>
+          <div class="job slide-up">
+            <h3>Product Manager</h3>
+            <p>Company B</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+          </div>
+          <div class="job slide-up">
+            <h3>Data  <br> Scientist</h3>
+            <p>Company C</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+          </div>
+          <div class="job slide-up">
+            <h3>Data  <br> Scientist</h3>
+            <p>Company C</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+          </div>
+          <div class="job slide-up">
+            <h3>Data  <br> Scientist</h3>
+            <p>Company C</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+          </div>
+          <div class="job slide-up">
+            <h3>Data  <br> Scientist</h3>
+            <p>Company C</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+      </section>
+
+
+       <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 mb-5">
+            <div class="bg-white">
+                <div class="owl-carousel vendor-carousel">
+                    <img src="src/img/vendor-1.jpg" alt="">
+                    <img src="src/img/vendor-2.jpg" alt="">
+                    <img src="src/img/vendor-3.jpg" alt="">
+                    <img src="src/img/vendor-4.jpg" alt="">
+                    <img src="src/img/vendor-5.jpg" alt="">
+                    <img src="src/img/vendor-6.jpg" alt="">
+                    <img src="src/img/vendor-7.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+      // Animations using GSAP
+      gsap.registerPlugin(ScrollTrigger);
+  
+      // Hero section text fade-in animation
+      gsap.from(".fade-in", {
+        duration: 1.5,
+        opacity: 0,
+        y: -30,
+        stagger: 0.3,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ".fade-in",
+          start: "top 80%",
+        },
+      });
+  
+      // Job listings slide-up animation
+      gsap.from(".slide-up", {
+        duration: 1,
+        opacity: 0,
+        y: 20,
+        stagger: 0.2,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ".slide-up",
+          start: "top 80%",
+        },
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </body> 
+</html>
